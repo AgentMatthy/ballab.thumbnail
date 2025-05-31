@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BallaB.Thumbnail</title>
+
+        <link rel="stylesheet" href="styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Xanh+Mono|Pinyon+Script|Hina+Mincho|Oranienbaum|Urbanist">
+
+        <script src="https://unpkg.com/split-type"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+        <script src="main.js"></script> 
+        <script src="anim.js"></script> 
+        <script>
+        // Initialize Lenis
+        const lenis = new Lenis({
+            autoRaf: true,
+        });
+
+        // Listen for the scroll event and log the event data
+        lenis.on('scroll', (e) => {
+            console.log(e);
+        });
+        </script>
+    </head>
+
+    <body>
+
+        <!--<nav id="nav">-->
+        <!--    <div class="left">-->
+        <!--        <h2 class="logo">BBT</h2>-->
+        <!--    </div>-->
+        <!--</nav>-->
+
+        <main>
+            <div class="intro">
+                <div class="title-mask-container">
+                    <h1 id='maintitle'>BallaB.Thumbnail</h1>
+                </div>
+                <h2 id='subtitle'>The thumbnail studio you have been looking for.</h2>
+            </div>
+            <div class="about">
+                <h2 id='t-about'>About</h2>
+                <p>We are a</p>
+            </div>
+        </main>
+
+    </body>
+</html>

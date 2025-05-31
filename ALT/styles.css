@@ -1,0 +1,76 @@
+:root {
+  --c-bg: #000;
+  --c-bg-alt: #161921;
+  --c-fg: #fff;
+  --c-fg-alt: #aaa;
+  --c-ac: #0FC7FF;
+  --font-fancy: "Pinyon Script", cursive;
+  --font-title: "Hina Mincho", cursive;
+  --font-body: "Urbanist", sans-serif;
+}
+
+body {
+  background-color: var(--c-bg);
+  color: var(--c-fg);
+  font-family: "Urbanist", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  text-align: center;
+}
+.intro .title-mask-container {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  width: fit-content;
+}
+.intro h1 {
+  font-size: 8rem;
+  font-family: var(--font-fancy);
+  font-weight: 400;
+  color: var(--c-ac);
+  margin: 0;
+  padding: 4rem 4rem 0;
+  line-height: 0.5;
+}
+.intro h2 {
+  font-size: 3rem;
+  font-family: var(--font-title);
+  font-weight: 400;
+  color: var(--c-fg);
+  margin: 0;
+  padding: 0;
+  line-height: 0.9;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 190vh;
+  text-align: center;
+  opacity: 0;
+  background-color: var(--c-bg-alt);
+  animation: appear 1s 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
