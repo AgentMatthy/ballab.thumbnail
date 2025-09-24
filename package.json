@@ -1,0 +1,27 @@
+{
+    "name": "ballab.thumbnail",
+    "version": "1.0.0",
+    "description": "The official website of ballab.thumbnail.",
+    "homepage": "https://github.com/AgentMatthy/ballab.thumbnail#readme",
+    "bugs": {
+        "url": "https://github.com/AgentMatthy/ballab.thumbnail/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AgentMatthy/ballab.thumbnail.git"
+    },
+    "license": "ISC",
+    "author": "Matthy",
+    "type": "commonjs",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "esbuild src/*.js --bundle --outdir=dist/"
+    },
+    "devDependencies": {
+        "esbuild": "^0.25.9"
+    },
+    "dependencies": {
+        "lenis": "^1.3.8"
+    }
+}

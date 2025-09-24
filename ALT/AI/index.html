@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BallaB Thumbnails - Crafting Viral Thumbnails That Get Clicks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-logo">
+            <div class="logo-text">BallaB</div>
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">BallaB</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">BallaB</span>
+                <span class="title-line">Thumbnails</span>
+            </h1>
+            <p class="hero-subtitle">Crafting Viral Thumbnails That Get Clicks</p>
+            <div class="hero-cta">
+                <button class="btn btn-primary">View Portfolio</button>
+                <button class="btn btn-secondary">Get In Touch</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Specialized in creating conversion-focused thumbnails</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-avatar">
+                        <img src="https://picsum.photos/200/200?random=100" alt="BallaB Profile" class="avatar-img">
+                        <div class="avatar-ring"></div>
+                    </div>
+                    <p class="about-description">Specialized thumbnail designer with 5+ years of experience creating eye-catching, conversion-focused thumbnails for YouTubers, streamers, and content creators. Expert in gaming, tech, and lifestyle content.</p>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Photoshop</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Thumbnail Design</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Branding</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Color Theory</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Typography</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Work</h2>
+                <p class="section-subtitle">A showcase of viral thumbnails across different niches</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="Gaming">
+                    <div class="portfolio-image" data-title="Gaming Thumbnails">
+                        <img src="https://picsum.photos/400/250?random=1" alt="Gaming Thumbnails" onerror="this.style.display='none'">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Gaming Thumbnails</h3>
+                                <p>High-energy gaming thumbnails with bold text and vibrant colors</p>
+                                <div class="portfolio-tools">
+                                    <span>Photoshop</span>
+                                    <span>After Effects</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="Technology">
+                    <div class="portfolio-image" data-title="Tech Reviews">
+                        <img src="https://picsum.photos/400/250?random=2" alt="Tech Reviews" onerror="this.style.display='none'">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Tech Reviews</h3>
+                                <p>Clean, modern thumbnails for tech review channels</p>
+                                <div class="portfolio-tools">
+                                    <span>Photoshop</span>
+                                    <span>Illustrator</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="Lifestyle">
+                    <div class="portfolio-image" data-title="Lifestyle Vlogs">
+                        <img src="https://picsum.photos/400/250?random=3" alt="Lifestyle Vlogs" onerror="this.style.display='none'">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Lifestyle Vlogs</h3>
+                                <p>Warm, inviting thumbnails for lifestyle content</p>
+                                <div class="portfolio-tools">
+                                    <span>Photoshop</span>
+                                    <span>Lightroom</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="Music">
+                    <div class="portfolio-image" data-title="Music Covers">
+                        <img src="https://picsum.photos/400/250?random=4" alt="Music Covers" onerror="this.style.display='none'">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Music Covers</h3>
+                                <p>Dynamic thumbnails for music and cover videos</p>
+                                <div class="portfolio-tools">
+                                    <span>Photoshop</span>
+                                    <span>Cinema 4D</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="Education">
+                    <div class="portfolio-image" data-title="Educational Content">
+                        <img src="https://picsum.photos/400/250?random=5" alt="Educational Content" onerror="this.style.display='none'">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Educational Content</h3>
+                                <p>Professional thumbnails for educational channels</p>
+                                <div class="portfolio-tools">
+                                    <span>Photoshop</span>
+                                    <span>Illustrator</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="Food">
+                    <div class="portfolio-image" data-title="Cooking Channels">
+                        <img src="https://picsum.photos/400/250?random=6" alt="Cooking Channels" onerror="this.style.display='none'">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Cooking Channels</h3>
+                                <p>Appetizing thumbnails that make viewers hungry</p>
+                                <div class="portfolio-tools">
+                                    <span>Photoshop</span>
+                                    <span>Lightroom</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="Fitness">
+                    <div class="portfolio-image" data-title="Fitness Content">
+                        <img src="https://picsum.photos/400/250?random=7" alt="Fitness Content" onerror="this.style.display='none'">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Fitness Content</h3>
+                                <p>Motivational thumbnails for fitness and health</p>
+                                <div class="portfolio-tools">
+                                    <span>Photoshop</span>
+                                    <span>After Effects</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="Travel">
+                    <div class="portfolio-image" data-title="Travel Vlogs">
+                        <img src="https://picsum.photos/400/250?random=8" alt="Travel Vlogs" onerror="this.style.display='none'">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Travel Vlogs</h3>
+                                <p>Wanderlust-inducing thumbnails for travel content</p>
+                                <div class="portfolio-tools">
+                                    <span>Photoshop</span>
+                                    <span>Lightroom</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="Business">
+                    <div class="portfolio-image" data-title="Business Content">
+                        <img src="https://picsum.photos/400/250?random=9" alt="Business Content" onerror="this.style.display='none'">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Business Content</h3>
+                                <p>Professional thumbnails for business and finance</p>
+                                <div class="portfolio-tools">
+                                    <span>Photoshop</span>
+                                    <span>Illustrator</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Services</h2>
+                <p class="section-subtitle">Professional thumbnail design services tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3 class="service-title">Custom Thumbnails</h3>
+                    <p class="service-description">Bespoke thumbnail designs tailored to your brand</p>
+                    <div class="service-price">$25-50</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📦</div>
+                    <h3 class="service-title">Thumbnail Packages</h3>
+                    <p class="service-description">Bulk thumbnail packages for consistent content</p>
+                    <div class="service-price">$200-400</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3 class="service-title">Brand Design</h3>
+                    <p class="service-description">Complete visual identity for your channel</p>
+                    <div class="service-price">$150-300</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3 class="service-title">Rush Delivery</h3>
+                    <p class="service-description">24-hour turnaround for urgent projects</p>
+                    <div class="service-price">+50%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to create thumbnails that get clicks? Let's work together!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <select name="service" required class="form-input">
+                                <option value="">Select Service</option>
+                                <option value="custom">Custom Thumbnails</option>
+                                <option value="package">Thumbnail Package</option>
+                                <option value="branding">Brand Design</option>
+                                <option value="rush">Rush Delivery</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Tell me about your project..." rows="5" required class="form-input"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:hello@ballabthumbnails.com">hello@ballabthumbnails.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <h4>Discord</h4>
+                            <span>BallaB#1234</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-link">Twitter</a>
+                        <a href="#" target="_blank" class="social-link">Instagram</a>
+                    </div>
+                    <div class="availability-badge">
+                        <div class="status-dot"></div>
+                        Available for hire
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 BallaB Thumbnails. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
