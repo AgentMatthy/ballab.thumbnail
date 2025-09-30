@@ -1,3 +1,5 @@
+import emailjs from '@emailjs/browser';
+
 const wrapper = document.getElementById("tiles");
 
 const createTile = index => {
@@ -32,3 +34,21 @@ createGrid();
 
 window.onresize = () => createGrid();
 
+// EmailJS
+
+emailjs.init({
+  publicKey: 'gAU74j2dSw6ljbrVj',
+});
+
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // these IDs from the previous steps
+        emailjs.sendForm('default_service', 'template_0556nso', this).then(() => {
+            console.log('SUCCESS!');
+        }, (error) => { console.log('FAILED...', error); });
+
+        // Clear the form
+        this.reset();
+    });
+}
