@@ -134,6 +134,8 @@ nav {
     right: 2rem;
 
     transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+
+    pointer-events: none;
   }
 
   .logo {
@@ -557,3 +559,39 @@ nav {
     }
   }
 }
+
+footer {
+  display: flex;
+  min-height: 15vh;
+  border-top: 2px solid var(--c-primary);
+  justify-content: space-evenly;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--c-border);
+      letter-spacing: 0.1rem;
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-family: var(--t-title);
+      color: var(--c-border);
+      text-transform: uppercase;
+    }
+  }
+}
+
