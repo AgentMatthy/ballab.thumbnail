@@ -28,6 +28,10 @@ snap.add(get_element_pos("#services"))
 snap.add(get_element_pos("#contact"))
 snap.add(document.documentElement.scrollHeight - window.innerHeight)
 
+document.querySelector('#herobtn').addEventListener('click', () => {
+  lenis.scrollTo(get_element_pos("#intro"));
+});
+
 document.querySelector('#homeBtn').addEventListener('click', () => {
   lenis.scrollTo(get_element_pos("#hero"));
 });

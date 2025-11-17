@@ -80,10 +80,11 @@ body {
 }
 
 nav {
+  opacity: 0;
   position: fixed;
-  width: calc(100% - 4vw);
-  margin: 2vw;
-  border-radius: 1rem;
+  width: calc(100% - 30vw);
+  margin: 2vw 15vw;
+  border-radius: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,26 +93,16 @@ nav {
   outline-offset: 5px;
   z-index: 10;
   transition: all 0.5s cubic-bezier(1, 0, 0, 1);
-}
-nav:hover {
   backdrop-filter: blur(20px);
   outline: 1.5px solid var(--c-primary);
   outline-offset: 0px;
 }
-nav:hover ul {
+nav ul {
   opacity: 1;
 }
-nav:hover img {
-  opacity: 0;
-}
 nav img {
-  width: 2rem;
-  height: 2rem;
-  filter: brightness(0) invert(1);
-  position: absolute;
-  right: 2rem;
-  transition: all 0.5s cubic-bezier(1, 0, 0, 1);
-  pointer-events: none;
+  opacity: 0;
+  display: none;
 }
 nav .logo {
   font-family: var(--t-title);
@@ -123,7 +114,7 @@ nav ul {
   display: flex;
   list-style: none;
   gap: 3rem;
-  opacity: 0;
+  opacity: 1;
   transition: all 0.5s cubic-bezier(1, 0, 0, 1);
 }
 nav ul li a {
@@ -221,6 +212,18 @@ nav ul li a:hover {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
+#hero #herobtn {
+  background-color: transparent;
+  color: var(--c-primary);
+  font-family: var(--t-title);
+  font-weight: bold;
+  border: 5px solid var(--c-primary);
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 9999rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
 
 #intro {
   min-height: 40vh;
@@ -310,6 +313,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 25vw;
 }
 #stats .stat .value {
   font-size: 3rem;
@@ -334,6 +338,74 @@ nav ul li a:hover {
   height: 7rem;
   background-color: var(--c-primary);
   border-radius: 999rem;
+}
+
+#showcase {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+#showcase .leftoverlay {
+  z-index: 3;
+  width: 5vw;
+  height: 15vw;
+  background-color: var(--c-bg);
+  position: absolute;
+  left: 0;
+}
+#showcase .leftoverlay:after {
+  content: "";
+  position: absolute;
+  background-color: var(--c-bg);
+  width: 1.5vw;
+  height: 15vw;
+  top: 0;
+  right: -3vw;
+}
+#showcase .rightoverlay {
+  z-index: 3;
+  width: 5vw;
+  height: 15vw;
+  background-color: var(--c-bg);
+  position: absolute;
+  right: 0;
+}
+#showcase .rightoverlay:after {
+  content: "";
+  position: absolute;
+  background-color: var(--c-bg);
+  width: 1.5vw;
+  height: 15vw;
+  top: 0;
+  left: -3vw;
+}
+#showcase .row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+#showcase .row .thumbnails {
+  display: flex;
+  direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+#showcase .row .thumbnails img {
+  width: 25vw;
+  height: 15vw;
+  background-color: var(--c-primary);
+  border-radius: 2rem;
+}
+#showcase .toleft {
+  justify-content: flex-start;
+}
+#showcase .toright {
+  justify-content: flex-end;
 }
 
 #services {
@@ -426,10 +498,12 @@ nav ul li a:hover {
   font-size: 1rem;
   font-weight: bold;
   color: var(--c-primary);
+  background-color: var(--c-bg);
   text-transform: uppercase;
-  margin: 0;
-  padding: 2rem 0 0 1rem;
-  line-height: 0.8rem;
+  translate: 0 0.5rem;
+  padding: 0 2px;
+  margin: 2rem 0 0 1rem;
+  line-height: 0.81rem;
 }
 #contact form input {
   width: 100%;
@@ -495,6 +569,11 @@ footer .right p {
   font-family: var(--t-title);
   color: var(--c-border);
   text-transform: uppercase;
+}
+
+#showcase {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=styles.css.map */
