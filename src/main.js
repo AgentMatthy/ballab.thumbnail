@@ -21,8 +21,8 @@ const createGrid = () => {
   
   const size = 50;
   
-  columns = Math.floor(window.innerWidth / size);
-  rows = Math.floor(window.innerHeight / size);
+  const columns = Math.floor(document.documentElement.clientWidth / size);
+  const rows = Math.floor(document.documentElement.clientHeight / size);
   
   wrapper.style.setProperty("--columns", columns);
   wrapper.style.setProperty("--rows", rows);

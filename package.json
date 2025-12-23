@@ -19,7 +19,7 @@
         "build": "esbuild src/*.js --bundle --outdir=dist/"
     },
     "devDependencies": {
-        "esbuild": "^0.25.9"
+        "esbuild": "^0.25.12"
     },
     "dependencies": {
         "@emailjs/browser": "^4.4.1",

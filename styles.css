@@ -51,10 +51,10 @@
 }
 
 :root {
-  --t-display: "NHaas Grotesk", serif;
-  --t-title: "Outfit", serif;
-  --t-body: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --t-fancy: "Avelire", sans-serif;
+  --t-display: 'NHaas Grotesk', serif;
+  --t-title: 'Outfit', serif;
+  --t-body: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --t-fancy: 'Avelire', sans-serif;
 }
 
 *,
@@ -193,7 +193,8 @@ nav ul li a:hover {
 }
 
 #hero {
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -576,6 +577,206 @@ footer .right p {
 #showcase {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  nav {
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+  }
+  nav .logo {
+    font-size: 1.5rem;
+  }
+  nav ul {
+    display: none;
+  }
+  nav img {
+    display: block;
+    opacity: 1;
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: brightness(0) invert(1);
+  }
+  #tiles {
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+  }
+  #hero {
+    height: 100vh;
+    height: 100dvh;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  #hero h1 {
+    font-size: 10vw;
+  }
+  #hero h2 {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  #hero #herobtn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+  #intro {
+    padding: 0 1rem;
+    text-align: center;
+  }
+  #intro p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  #intro .fancy {
+    font-size: 1.25rem;
+  }
+  .separator {
+    padding: 2rem 1rem;
+  }
+  .separator p {
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+  }
+  .separator .decor {
+    margin: 0 0.5rem;
+  }
+  #about {
+    padding: 0 1rem;
+  }
+  #about .container {
+    flex-direction: column-reverse;
+  }
+  #about .container .text {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  #about .container .text p {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+  #about .container .pfp .pfpplaceholder {
+    width: 10rem;
+    height: 10rem;
+  }
+  #about .fancy {
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  #stats .statsrow {
+    flex-direction: column;
+    min-height: auto;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+  #stats .stat {
+    min-width: auto;
+  }
+  #stats .stat .value {
+    font-size: 2rem;
+  }
+  #stats .stat .label {
+    font-size: 1rem;
+  }
+  #showcase {
+    gap: 1rem;
+  }
+  #showcase .leftoverlay,
+  #showcase .rightoverlay {
+    display: none;
+  }
+  #showcase .row .thumbnails {
+    gap: 1rem;
+  }
+  #showcase .row .thumbnails img {
+    width: 60vw;
+    height: 35vw;
+    border-radius: 0.75rem;
+    flex-shrink: 0;
+  }
+  #services {
+    padding: 0 1rem;
+  }
+  #services .cards {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #services .cards .card {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    padding: 1.5rem;
+  }
+  #services .cards .card:after {
+    width: 100%;
+    height: 100%;
+  }
+  #services .cards .card .cardtop .title {
+    font-size: 1.5rem;
+  }
+  #services .cards .card .cardtop .description {
+    font-size: 0.85rem;
+  }
+  #services .cards .card .price {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  #contact {
+    padding: 0 1rem;
+  }
+  #contact form {
+    width: 100%;
+  }
+  #contact form input, #contact form textarea {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+  #contact form textarea {
+    height: 12rem;
+  }
+  #contact form label {
+    font-size: 0.85rem;
+    margin: 1.5rem 0 0 0.75rem;
+  }
+  #contact form #submit {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+  footer {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+    text-align: center;
+  }
+  footer .left p,
+  footer .right p {
+    font-size: 0.85rem;
+  }
+  .endspace {
+    height: 20vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  #hero h1 {
+    font-size: 12vw;
+  }
+  #hero h2 {
+    font-size: 0.85rem;
+  }
+  #showcase .row .thumbnails img {
+    width: 70vw;
+    height: 40vw;
+    border-radius: 0.5rem;
+  }
+  #services .cards .card .cardtop .title {
+    font-size: 1.25rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
