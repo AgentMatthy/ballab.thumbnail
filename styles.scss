@@ -113,7 +113,7 @@ nav {
 
   transition: all 0.5s cubic-bezier(1, 0, 0, 1);
 
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(60px);
   outline: 1.5px solid var(--c-primary);
   outline-offset: 0px;
 
@@ -641,6 +641,8 @@ nav {
       margin: 0;
       font-size: 1.5rem;
       font-weight: bold;
+      resize: none;
+      height: 20rem;
 
       background-color: transparent;
       color: var(--c-text);

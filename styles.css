@@ -93,7 +93,7 @@ nav {
   outline-offset: 5px;
   z-index: 10;
   transition: all 0.5s cubic-bezier(1, 0, 0, 1);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(60px);
   outline: 1.5px solid var(--c-primary);
   outline-offset: 0px;
 }
@@ -525,6 +525,8 @@ nav ul li a:hover {
   margin: 0;
   font-size: 1.5rem;
   font-weight: bold;
+  resize: none;
+  height: 20rem;
   background-color: transparent;
   color: var(--c-text);
   font-family: var(--t-body);
