@@ -34,6 +34,31 @@ createGrid();
 
 window.onresize = () => createGrid();
 
+// Mobile Menu Toggle
+const menuToggle = document.querySelector('nav .menu-toggle');
+const navMenu = document.querySelector('nav ul');
+const nav = document.querySelector('nav');
+
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('menu-open');
+  });
+
+  // Close menu when clicking a link
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('menu-open');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && nav.classList.contains('menu-open')) {
+      nav.classList.remove('menu-open');
+    }
+  });
+}
+
 // EmailJS
 
 emailjs.init({

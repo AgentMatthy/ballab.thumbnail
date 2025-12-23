@@ -411,6 +411,24 @@
       };
       createGrid();
       window.onresize = () => createGrid();
+      var menuToggle = document.querySelector("nav .menu-toggle");
+      var navMenu = document.querySelector("nav ul");
+      var nav = document.querySelector("nav");
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+          nav.classList.toggle("menu-open");
+        });
+        navMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            nav.classList.remove("menu-open");
+          });
+        });
+        document.addEventListener("click", (e) => {
+          if (!nav.contains(e.target) && nav.classList.contains("menu-open")) {
+            nav.classList.remove("menu-open");
+          }
+        });
+      }
       es_default.init({
         publicKey: "gAU74j2dSw6ljbrVj"
       });

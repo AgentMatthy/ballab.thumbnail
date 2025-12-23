@@ -126,6 +126,10 @@ nav {
     display: none;
   }
 
+  .menu-toggle {
+    display: none; // Hidden on desktop
+  }
+
   // img {
   //   width: 2rem;
   //   height: 2rem;
@@ -720,21 +724,78 @@ footer {
     margin: 1rem;
     padding: 0.75rem 1rem;
     border-radius: 1rem;
+    flex-direction: column;
+    align-items: stretch;
 
     .logo {
       font-size: 1.5rem;
     }
 
-    ul {
-      display: none; // Hide menu items on mobile, show burger instead
+    // Hide default menu toggle on desktop
+    .menu-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      right: 1rem;
+      top: 0.75rem;
     }
 
-    img {
+    .menu-open-icon {
       display: block;
       opacity: 1;
       width: 1.5rem;
       height: 1.5rem;
       filter: brightness(0) invert(1);
+      transition: opacity 0.2s ease;
+    }
+
+    .menu-close-icon {
+      display: none;
+      opacity: 0;
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--c-text);
+      transition: opacity 0.2s ease;
+    }
+
+    ul {
+      width: 100%;
+      flex-direction: column;
+      gap: 0;
+      padding: 0;
+      margin-top: 0;
+      border-top: none;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.25s ease, padding 0.3s ease, margin 0.3s ease;
+    }
+
+    // Menu open state
+    &.menu-open {
+      ul {
+        display: flex;
+        max-height: 300px;
+        opacity: 1;
+        padding: 1rem 0 0.5rem 0;
+        margin-top: 0.75rem;
+        border-top: 1px solid var(--c-border);
+        gap: 1rem;
+      }
+
+      .menu-open-icon {
+        display: none;
+        opacity: 0;
+      }
+
+      .menu-close-icon {
+        display: block;
+        opacity: 1;
+      }
     }
   }
 
