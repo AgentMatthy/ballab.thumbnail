@@ -1,6 +1,8 @@
 import Lenis from 'lenis'
 import Snap from 'lenis/snap'
 
+const MOBILE_BREAKPOINT = 768;
+
 const lenis = new Lenis({
   autoRaf: true,
 });
@@ -9,24 +11,46 @@ lenis.on('scroll', (e) => {
   console.log(e);
 });
 
-const snap = new Snap(lenis, {})
+let snap = null;
 
-function get_element_pos(selector) {
+const get_element_pos = (selector) => {
   const element = document.querySelector(selector);
   
   const rect = element.getBoundingClientRect();
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   
   return rect.top + scrollTop + (rect.height / 2) - (window.innerHeight / 2);
-}
+};
 
-snap.add(get_element_pos("#hero"))
-snap.add(get_element_pos("#intro"))
-snap.add(get_element_pos("#about"))
-snap.add(get_element_pos("#stats"))
-snap.add(get_element_pos("#services"))
-snap.add(get_element_pos("#contact"))
-snap.add(document.documentElement.scrollHeight - window.innerHeight)
+const snapSections = ["#hero", "#intro", "#about", "#stats", "#services", "#contact"];
+
+const initSnap = () => {
+  // Destroy existing snap if it exists
+  if (snap) {
+    snap.destroy();
+    snap = null;
+  }
+  
+  // Only enable snap on desktop
+  if (window.innerWidth >= MOBILE_BREAKPOINT) {
+    snap = new Snap(lenis, {});
+    
+    snapSections.forEach(section => {
+      snap.add(get_element_pos(section));
+    });
+    snap.add(document.documentElement.scrollHeight - window.innerHeight);
+  }
+};
+
+// Initialize snap on load
+initSnap();
+
+// Update snap points on resize (debounced)
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(initSnap, 150);
+});
 
 document.querySelector('#herobtn').addEventListener('click', () => {
     lenis.scrollTo(get_element_pos("#intro"));

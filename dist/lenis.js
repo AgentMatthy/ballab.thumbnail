@@ -1389,26 +1389,40 @@
     "src/lenis.js"() {
       init_lenis();
       init_lenis_snap();
+      var MOBILE_BREAKPOINT = 768;
       var lenis = new Lenis({
         autoRaf: true
       });
       lenis.on("scroll", (e) => {
         console.log(e);
       });
-      var snap = new Snap(lenis, {});
-      function get_element_pos(selector) {
+      var snap = null;
+      var get_element_pos = (selector) => {
         const element = document.querySelector(selector);
         const rect = element.getBoundingClientRect();
         const scrollTop2 = window.scrollY || document.documentElement.scrollTop;
         return rect.top + scrollTop2 + rect.height / 2 - window.innerHeight / 2;
-      }
-      snap.add(get_element_pos("#hero"));
-      snap.add(get_element_pos("#intro"));
-      snap.add(get_element_pos("#about"));
-      snap.add(get_element_pos("#stats"));
-      snap.add(get_element_pos("#services"));
-      snap.add(get_element_pos("#contact"));
-      snap.add(document.documentElement.scrollHeight - window.innerHeight);
+      };
+      var snapSections = ["#hero", "#intro", "#about", "#stats", "#services", "#contact"];
+      var initSnap = () => {
+        if (snap) {
+          snap.destroy();
+          snap = null;
+        }
+        if (window.innerWidth >= MOBILE_BREAKPOINT) {
+          snap = new Snap(lenis, {});
+          snapSections.forEach((section) => {
+            snap.add(get_element_pos(section));
+          });
+          snap.add(document.documentElement.scrollHeight - window.innerHeight);
+        }
+      };
+      initSnap();
+      var resizeTimeout;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(initSnap, 150);
+      });
       document.querySelector("#herobtn").addEventListener("click", () => {
         lenis.scrollTo(get_element_pos("#intro"));
       });
