@@ -482,6 +482,31 @@ nav ul li a:hover {
   letter-spacing: 0.1rem;
   justify-self: flex-end;
 }
+#services .cards .card .trending-badge {
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--c-primary);
+  color: var(--c-bg);
+  font-size: 0.7rem;
+  font-weight: bold;
+  font-family: var(--t-title);
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  padding: 0.35rem 1rem;
+  border-radius: 999rem;
+  white-space: nowrap;
+  z-index: 5;
+}
+#services .cards .card.featured {
+  transform: scale(1.05);
+  outline-width: 2px;
+  box-shadow: 0 0 40px rgba(0, 159, 212, 0.25);
+}
+#services .cards .card.featured:after {
+  background: linear-gradient(160deg, rgba(0, 47, 100, 0.8) 30%, rgb(0, 159, 212) 100%);
+}
 
 #contact {
   width: 100%;
@@ -777,6 +802,14 @@ footer .right p {
   #services .cards .card .price {
     font-size: 1.5rem;
     margin-top: 1rem;
+  }
+  #services .cards .card .trending-badge {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.8rem;
+  }
+  #services .cards .card.featured {
+    transform: none;
+    outline-width: 2px;
   }
   #contact {
     padding: 0 1rem;
