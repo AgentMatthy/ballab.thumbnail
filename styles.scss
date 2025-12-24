@@ -174,15 +174,14 @@ nav {
 // BG
 
 #tiles {
-  // Use svh (small viewport height) which represents the smallest possible viewport
-  // This ensures tiles cover the full area even when iOS browser chrome is hidden
-  height: 100vh;
-  height: 100svh;
-  
-  width: 100vw;
+  // iOS Safari fix: extend beyond viewport to cover transparent browser chrome
+  // Use negative positioning to extend into top/bottom safe areas
   position: fixed;
-  top: 0;
+  top: -100px;
   left: 0;
+  width: 100vw;
+  height: calc(100vh + 200px);
+  height: calc(100dvh + 200px);
   z-index: -2;
   
   display: grid;
@@ -852,10 +851,11 @@ footer {
     }
   }
 
-  // Background grid - ensure it fills viewport on iOS
+  // Background grid - iOS Safari fix
   #tiles {
-    height: 100vh;
-    height: 100svh;
+    top: -100px;
+    height: calc(100vh + 200px);
+    height: calc(100dvh + 200px);
     width: 100vw;
   }
 

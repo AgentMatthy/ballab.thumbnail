@@ -22,9 +22,9 @@ const createGrid = () => {
   const size = 50;
   
   const columns = Math.floor(document.documentElement.clientWidth / size);
-  // Use window.innerHeight for iOS - it includes the area behind browser chrome
-  // Also use CSS.supports to detect svh support and calculate accordingly
-  const viewportHeight = window.innerHeight;
+  // Add extra rows to cover iOS browser chrome areas (top + bottom = 200px extra)
+  const extraHeight = 200;
+  const viewportHeight = window.innerHeight + extraHeight;
   const rows = Math.floor(viewportHeight / size);
   
   wrapper.style.setProperty("--columns", columns);

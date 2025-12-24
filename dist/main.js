@@ -404,7 +404,8 @@
         wrapper.innerHTML = "";
         const size = 50;
         const columns = Math.floor(document.documentElement.clientWidth / size);
-        const viewportHeight = window.innerHeight;
+        const extraHeight = 200;
+        const viewportHeight = window.innerHeight + extraHeight;
         const rows = Math.floor(viewportHeight / size);
         wrapper.style.setProperty("--columns", columns);
         wrapper.style.setProperty("--rows", rows);
