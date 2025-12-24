@@ -271,6 +271,22 @@ nav {
     font-size: 7vw;
     font-family: var(--t-display);
     font-weight: bold;
+    
+    // Gradient text
+    background: linear-gradient(
+      180deg, 
+      #ffffff 0%, 
+      #ffffff 40%,
+      var(--c-primary) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    // Static glow effect - stronger opacity, same radius
+    filter: drop-shadow(0 0 12px rgba(0, 159, 212, 0.7))
+            drop-shadow(0 0 30px rgba(0, 159, 212, 0.5))
+            drop-shadow(0 0 50px rgba(0, 159, 212, 0.3));
   }
 
   h2 {
@@ -848,7 +864,8 @@ footer {
     text-align: center;
 
     h1 {
-      font-size: 10vw; // Responsive but reasonable
+      font-size: 10vw;
+      white-space: nowrap;
     }
 
     h2 {
@@ -1066,7 +1083,8 @@ footer {
 @media screen and (max-width: 480px) {
   #hero {
     h1 {
-      font-size: 12vw;
+      font-size: 9vw;
+      white-space: nowrap;
     }
 
     h2 {
