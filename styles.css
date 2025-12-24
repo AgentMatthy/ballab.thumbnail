@@ -154,16 +154,26 @@ nav ul li a:hover {
   position: absolute;
 }
 
+#tilebg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -3;
+}
+
 #tilebg {
   position: absolute;
-  top: calc(-1 * (45vw + 20vh));
-  left: calc(50% - 45vw);
+  top: -166.6666666667vh;
+  left: calc(50% - 116.6666666667vh);
   background-color: var(--c-primary);
-  width: 90vw;
-  height: 90vw;
-  border-radius: 999rem;
+  width: 233.3333333333vh;
+  height: 233.3333333333vh;
+  border-radius: 50%;
   filter: blur(400px);
-  z-index: -3;
   overflow: hidden;
 }
 

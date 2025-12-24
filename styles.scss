@@ -201,22 +201,36 @@ nav {
   position: absolute;
 }
 
-#tilebg {
- $size: 90vw;
-
+#tilebg-wrapper {
   position: absolute;
-  top: calc(-1 * ($size / 2 + 20vh));
-  // top: calc(50% - ($size / 2));
-  left: calc(50% - ($size / 2));
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -3;
+}
+
+#tilebg {
+  // Sphere positioning:
+  // - Center at 50vh above viewport top (top center = -50vh)
+  // - Bottom at 2/3 viewport height (66.67vh)
+  // radius = 66.67vh - (-50vh) = 116.67vh
+  // diameter = 233.33vh = 100vh * 7 / 3
+  $sphere-size: calc(100vh * 7 / 3);
+  
+  position: absolute;
+  top: calc(-1 * ($sphere-size / 2) - 50vh);
+  left: calc(50% - ($sphere-size / 2));
 
   background-color: var(--c-primary);
-  width: $size;
-  height: $size;
-  border-radius: 999rem;
+  width: $sphere-size;
+  height: $sphere-size;
+  border-radius: 50%;
 
   filter: blur(400px);
 
-  z-index: -3;
   overflow: hidden;
 }
 
