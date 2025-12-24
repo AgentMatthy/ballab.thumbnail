@@ -175,20 +175,18 @@ nav {
 
 #tiles {
   // iOS Safari fix: extend beyond viewport to cover transparent browser chrome
-  // Use negative positioning to extend into top/bottom safe areas
   position: fixed;
-  top: -100px;
+  top: 0;
   left: 0;
   width: 100vw;
   height: calc(100vh + 200px);
-  height: calc(100dvh + 200px);
+  // Use transform to shift up - this often bypasses iOS clipping
+  transform: translateY(-100px);
   z-index: -2;
   
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
   grid-template-rows: repeat(var(--rows), 1fr);
-
-  overflow: hidden;
 }
 
 .tile {
@@ -853,9 +851,8 @@ footer {
 
   // Background grid - iOS Safari fix
   #tiles {
-    top: -100px;
     height: calc(100vh + 200px);
-    height: calc(100dvh + 200px);
+    transform: translateY(-100px);
     width: 100vw;
   }
 
