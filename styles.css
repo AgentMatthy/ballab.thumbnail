@@ -131,8 +131,11 @@ nav ul li a:hover {
 
 #tiles {
   height: 100vh;
-  width: calc(100% - 2px);
+  height: 100svh;
+  width: 100vw;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: -2;
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
@@ -686,7 +689,7 @@ footer .right p {
   }
   #tiles {
     height: 100vh;
-    height: 100dvh;
+    height: 100svh;
     width: 100vw;
   }
   #hero {

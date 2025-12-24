@@ -404,7 +404,8 @@
         wrapper.innerHTML = "";
         const size = 50;
         const columns = Math.floor(document.documentElement.clientWidth / size);
-        const rows = Math.floor(document.documentElement.clientHeight / size);
+        const viewportHeight = window.innerHeight;
+        const rows = Math.floor(viewportHeight / size);
         wrapper.style.setProperty("--columns", columns);
         wrapper.style.setProperty("--rows", rows);
         createTiles(columns * rows);

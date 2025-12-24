@@ -174,12 +174,15 @@ nav {
 // BG
 
 #tiles {
-  // height: calc(100vh - 1px);
-  // width: calc(100vw - 1px);
-
+  // Use svh (small viewport height) which represents the smallest possible viewport
+  // This ensures tiles cover the full area even when iOS browser chrome is hidden
   height: 100vh;
-  width: calc(100% - 2px);
+  height: 100svh;
+  
+  width: 100vw;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: -2;
   
   display: grid;
@@ -849,10 +852,10 @@ footer {
     }
   }
 
-  // Background grid - ensure it fills viewport
+  // Background grid - ensure it fills viewport on iOS
   #tiles {
     height: 100vh;
-    height: 100dvh;
+    height: 100svh;
     width: 100vw;
   }
 
